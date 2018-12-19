@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{F5642814-86D7-3E40-FAA0-860B930294DB}</ProjectGuid>
+    <ProjectGuid>{9521920E-A3D1-01C8-0D29-8FF8E759F64F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\CameraBehaviour.cs" />
+     <Compile Include="Assets\Scripts\PlatformDestroyer.cs" />
+     <Compile Include="Assets\Scripts\PlatformGenerator.cs" />
      <Compile Include="Assets\Scripts\PlayerBehaviour.cs" />
      <None Include="Assets\Kenney Art\Base pack\Player\p2_spritesheet.txt" />
      <None Include="Assets\Kenney Art\Base pack\HUD\hud_spritesheet.xml" />
