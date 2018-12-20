@@ -158,7 +158,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 202321276}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.172417, y: -3.4124334, z: 0}
+  m_LocalPosition: {x: 4.172417, y: -3.45, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 273727312}
@@ -316,6 +316,49 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platformDestructionPoint: {fileID: 0}
+--- !u!1 &455974923
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 455974925}
+  - component: {fileID: 455974924}
+  m_Layer: 0
+  m_Name: ObjectPool
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &455974924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 455974923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac420e18db0a9e245ace103457a6c3b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pooledObject: {fileID: 1282373313764596, guid: 697e26f9241e942418283f8c37763dc4,
+    type: 2}
+  pooledAmount: 2
+--- !u!4 &455974925
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 455974923}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &464733875
 GameObject:
   m_ObjectHideFlags: 0
@@ -760,6 +803,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platform: {fileID: 1282373313764596, guid: 697e26f9241e942418283f8c37763dc4, type: 2}
+  platforms:
+  - {fileID: 1539723328000016, guid: 3dd36bcbe1599e542b25b7be24769b59, type: 2}
+  - {fileID: 1741235304743702, guid: 34d79d3dc081a324f87d7f65b0bd4520, type: 2}
+  - {fileID: 1282373313764596, guid: 697e26f9241e942418283f8c37763dc4, type: 2}
+  - {fileID: 1534833403126882, guid: c4114cc1d1376384f826be1bb4c979ed, type: 2}
   platformGenerationPoint: {fileID: 764350835}
   platformDistanceMin: 1
   platformDistanceMax: 3.5
