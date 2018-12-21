@@ -6,7 +6,7 @@ public class CameraBehaviour : MonoBehaviour
 {
     public PlayerBehaviour player;
     private Vector3 prevPlayerPosition;
-    private float moveDistance;
+    private Vector3 moveDistance;
 	void Start ()
     {
         player = FindObjectOfType<PlayerBehaviour>();
@@ -18,9 +18,11 @@ public class CameraBehaviour : MonoBehaviour
 	void Update ()
     {
         //the difference between the players current x pos and it's previous x pos is how much the camera should move
-        moveDistance = player.transform.position.x - prevPlayerPosition.x;
+        moveDistance.x = player.transform.position.x - prevPlayerPosition.x;
+        moveDistance.y = player.transform.position.y - prevPlayerPosition.y;
+
         //update the cameras x position using the moveDistance variable
-        transform.position = new Vector3(transform.position.x + moveDistance, transform.position.y, transform.position.z);
+        transform.position = new Vector3(transform.position.x + moveDistance.x, transform.position.y + moveDistance.y, transform.position.z);
         prevPlayerPosition = player.transform.position;
 	}
 }
