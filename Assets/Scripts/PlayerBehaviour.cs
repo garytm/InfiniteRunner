@@ -6,9 +6,11 @@ public class PlayerBehaviour : MonoBehaviour {
 
     public float movementSpeed = 0.1f;
     public float jumpHeight = 0.1f;
-    public bool grounded;
+    private bool grounded;
+    public bool teleporting;
     //accessing the layers within Unity for collision checks
     public LayerMask ground;
+    public LayerMask portal;
     //accessing the players rigid body in code
     private Rigidbody2D playerRigidBody;
     private Collider2D playerCollider;
@@ -30,6 +32,7 @@ public class PlayerBehaviour : MonoBehaviour {
     {
         //checking if the player is colliding with the ground layer mask and setting grounded to true
         grounded = Physics2D.IsTouchingLayers(playerCollider, ground);
+        teleporting = Physics2D.IsTouchingLayers(playerCollider, portal);
         //making the player run without stopping and jump when the jump key is pressed
         playerRigidBody.velocity = new Vector2(movementSpeed, playerRigidBody.velocity.y);
 

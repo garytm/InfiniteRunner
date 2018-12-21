@@ -10,7 +10,7 @@ public class CameraBehaviour : MonoBehaviour
 	void Start ()
     {
         player = FindObjectOfType<PlayerBehaviour>();
-        //setting the previoius player position to equal it's current position in the start method
+        //setting the previous player position to equal it's current position in the start method
         //to give us something to use before it is updated
         prevPlayerPosition = player.transform.position;
     }
