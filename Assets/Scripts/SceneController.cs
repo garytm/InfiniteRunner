@@ -10,7 +10,7 @@ public class SceneController : MonoBehaviour
     }
     public void PlayGame()
     {
-        SceneManager.LoadScene("MainGame");
+        SceneManager.LoadScene("Level1");
     }
     public void PlayEndless()
     {
